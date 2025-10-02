@@ -47,7 +47,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-center py-6 text-sm text-indigo-100">
-        ✨ Built with Next.js, Tailwind, and a spark of imagination
+        ✨ Idea Board is a little playground I made — where anyone can drop thoughts, upvote the cool ones, or just get inspired.
       </footer>
     </div>
   );
