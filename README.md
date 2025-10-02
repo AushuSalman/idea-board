@@ -1,11 +1,3 @@
-## 🎥 Demo
-
-### 🏠 Landing Page
-![Landing Page](./screenshots/landingpage.png)
-
-### 💡 Idea Board App
-![Idea Board](./screenshots/app_page.png)
-
 # 💡 Idea Board
 
 A full-stack web application with a marketing landing page and a connected "Idea Board" mini-app.  
@@ -45,6 +37,13 @@ Built with **Next.js, Tailwind CSS, Express, Prisma, PostgreSQL, and Docker**.
 - **UX Features**: Toasts, responsive UI, polling for live updates  
 
 ---
+## 🎥 Demo
+
+### 🏠 Landing Page
+![Landing Page](./screenshots/landingpage.png)
+
+### 💡 Idea Board App
+![Idea Board](./screenshots/app_page.png)
 
 ## 🐳 Run Locally with Docker Compose
 
