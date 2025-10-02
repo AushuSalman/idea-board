@@ -1,3 +1,11 @@
+## 🎥 Demo
+
+### 🏠 Landing Page
+![Landing Page](./screenshots/landingpage.png)
+
+### 💡 Idea Board App
+![Idea Board](./screenshots/app_page.png)
+
 # 💡 Idea Board
 
 A full-stack web application with a marketing landing page and a connected "Idea Board" mini-app.  
