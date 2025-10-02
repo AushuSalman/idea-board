@@ -37,6 +37,12 @@ Built with **Next.js, Tailwind CSS, Express, Prisma, PostgreSQL, and Docker**.
 - **UX Features**: Toasts, responsive UI, polling for live updates  
 
 ---
+
+## Personal Notes
+- First time I used Prisma migrations in Docker, learned how `migrate deploy` works.
+- Decided not to over-engineer with WebSockets — polling was enough.
+
+
 ## 🎥 Demo
 
 ### 🏠 Landing Page
