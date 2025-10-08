@@ -3,12 +3,11 @@ import { useEffect, useState } from "react";
 import { MoreVertical, Trash2 } from "lucide-react";
 import toast from "react-hot-toast";
 
-// Detect API dynamically based on window.location
 let API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
-if (typeof window !== "undefined") {
-  const hostname = window.location.hostname; // e.g. "localhost" or "192.168.1.50"
-  API = `http://${hostname}:4000`;
+// Force use of env variable in production
+if (typeof window !== "undefined" && window.location.hostname !== "localhost") {
+  API = process.env.NEXT_PUBLIC_API_URL;
 }
 
 
