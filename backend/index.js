@@ -6,7 +6,13 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const app = express();
 
-app.use(cors());
+// ✅ Allow frontend from Vercel
+app.use(cors({
+  origin: ["https://idea-board-jade.vercel.app"],
+  methods: ["GET", "POST", "PATCH", "DELETE"],
+  credentials: true,
+}));
+
 app.use(bodyParser.json());
 
 // Health check
@@ -36,17 +42,12 @@ app.patch('/ideas/:id/upvote', async (req, res) => {
   try {
     const updated = await prisma.idea.update({
       where: { id },
-      data: { upvotes: { increment: 1 } }
+      data: { upvotes: { increment: 1 } },
     });
     res.json(updated);
   } catch (err) {
     res.status(404).json({ error: 'Idea not found' });
   }
-});
-
-const port = process.env.PORT || 4000;
-app.listen(port, () => {
-  console.log(`🚀 Backend running on port ${port}`);
 });
 
 // Delete idea
@@ -58,4 +59,10 @@ app.delete('/ideas/:id', async (req, res) => {
   } catch (err) {
     res.status(404).json({ error: 'Idea not found' });
   }
+});
+
+// ✅ Important for Render: listen on all interfaces
+const port = process.env.PORT || 4000;
+app.listen(port, '0.0.0.0', () => {
+  console.log(`🚀 Backend running on port ${port}`);
 });
