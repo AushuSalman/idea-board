@@ -3,12 +3,10 @@ import { useEffect, useState } from "react";
 import { MoreVertical, Trash2 } from "lucide-react";
 import toast from "react-hot-toast";
 
-let API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+const API =
+  process.env.NEXT_PUBLIC_API_URL ||
+  "https://idea-board-backend-04bn.onrender.com";
 
-// Force use of env variable in production
-if (typeof window !== "undefined" && window.location.hostname !== "localhost") {
-  API = process.env.NEXT_PUBLIC_API_URL;
-}
 
 
 interface Idea {
